@@ -1,0 +1,36 @@
+/* header, main, footer layout에 자주 사용함. */
+
+html,
+body {
+    /* 브라우저 뷰포트에 HTML 문서 높이를 맞춤 */
+    height: 100%;
+}
+
+body {
+    display: flex;
+    min-height: 100vh; /* 유동적 높이를 위한 min-height */
+    flex-direction: column;
+}
+
+main {
+    /* flex가 하나면 남는 공간을 전부 가짐 (100%) */
+    flex: 1;
+}
+
+/* Cascade option (CSS) 성질 때문에 이전 파일 적용할 수 있음. */
+footer {
+    background-color: var(--light-gray);
+    height: 3rem;
+}
+
+.footer-container {
+    display: flex;
+    /* container에 높이가 지정되어야 정렬이 똑바로 됨. */
+    height: 3rem;
+    /* line-height: 3rem; 써도 되는데, 불안정함. */
+    justify-content: center; /* 주축 정렬 */
+    align-items: center; /* 교차축 정렬 */
+    font-size: 1.2rem;
+
+    gap: 1rem; /* margin 지정해도 됨 */
+}

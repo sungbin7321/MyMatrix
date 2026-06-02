@@ -1,0 +1,4 @@
+# gitignore는 항상 최상단 파일에 있어야 함
+Backend/node_modules
+Backend/secret.js
+Backend/package-lock.json
